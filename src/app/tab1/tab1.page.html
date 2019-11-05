@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Skinnyfy
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="ion-padding">
+        <p>calorii pentru ziua de azi:</p>
+        <ion-progress-bar>
+       
+        </ion-progress-bar>
+        <br>
+        <ion-item-divider>
+         </ion-item-divider>
+         <p>Istoric mancare:</p>
+         <br>
+         <ion-item-divider>
+           </ion-item-divider>
+         
+      <ion-list></ion-list>
+
+      <ion-infinite-scroll threshold="100px" (ionInfinite)="loadData($event)">
+        <ion-infinite-scroll-content
+          loadingSpinner="dots"
+          loadingText="Se incarca...">
+        </ion-infinite-scroll-content>
+      </ion-infinite-scroll>
+      <ion-button href="/barcode">
+        <ion-icon name="camera"></ion-icon>
+
+      </ion-button>
+      </div>
+
+</ion-content>
+ 
