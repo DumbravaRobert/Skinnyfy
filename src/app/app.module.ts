@@ -12,6 +12,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import * as firebase from 'firebase';
 import { ReactiveFormsModule } from '@angular/forms';
+import { BarcodeScanner } from '@ionic-native/barcode-scanner/ngx';
 
 
 @NgModule({
@@ -23,7 +24,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     SplashScreen,
     AuthenticateService,
     ReactiveFormsModule,
-    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
+  
+    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
+    BarcodeScanner
   ],
   bootstrap: [AppComponent]
 })
