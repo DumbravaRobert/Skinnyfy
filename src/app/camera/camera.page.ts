@@ -27,7 +27,7 @@ export class CameraPage {
     this.barcodeScanner
       .scan()
       .then(barcodeData => {
-        alert("Barcode data " + JSON.stringify(barcodeData));
+     //   alert("Barcode data " + JSON.stringify(barcodeData));
         this.scannedData = barcodeData;
       })
       .catch(err => {
