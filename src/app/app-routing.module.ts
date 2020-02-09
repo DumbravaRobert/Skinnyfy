@@ -5,8 +5,8 @@ const routes: Routes = [
   
   { path: '', loadChildren: './login/login.module#LoginPageModule' },
   { path: 'register', loadChildren: './register/register.module#RegisterPageModule' },
-  {  path: '', loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule) }, 
-  { path: 'feed', loadChildren: './tab1/tab1.module#Tab1PageModule'},
+  { path: '', loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule) }, 
+  { path: 'feed', loadChildren: './tabs/tabs.module#TabsPageModule'},
   { path: 'camera', loadChildren: './camera/camera.module#CameraPageModule' }
 
 
