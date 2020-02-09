@@ -14,6 +14,7 @@ import { FormsModule } from '@angular/forms';
 import * as firebase from 'firebase';
 import { ReactiveFormsModule } from '@angular/forms';
 import { BarcodeScanner } from '@ionic-native/barcode-scanner/ngx';
+import { FoodArrayService } from './services/foodArray.service';
 
 
 @NgModule({
@@ -24,6 +25,7 @@ import { BarcodeScanner } from '@ionic-native/barcode-scanner/ngx';
     StatusBar,
     SplashScreen,
     AuthenticateService,
+    FoodArrayService,
     ReactiveFormsModule,
   
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },

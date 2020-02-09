@@ -3,6 +3,9 @@ import { BarCode } from '../models/barCode.model';
 
 @Injectable()
 export class FoodArrayService {
+
+    constructor(){}
+    
     barCodesArray: BarCode[] = [{
         "barCode": 9006900014292,
         "name": "Orange Juice",
