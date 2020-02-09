@@ -31,24 +31,12 @@ export class CameraPage {
       .then(barcodeData => {
         this.scannedData = barcodeData;
         var barCode: BarCode = this.barCodesArray.findByBarCode(+barcodeData.text);
-        alert("Barcode data " + JSON.stringify(barCode));
+       
       })
       .catch(err => {
         console.log("Error", err);
       });
   }
  
-  encodedText() {
-    this.barcodeScanner
-      .encode(this.barcodeScanner.Encode.TEXT_TYPE, this.encodeData)
-      .then(
-        encodedData => {
-          console.log(encodedData);
-          this.encodeData = encodedData;
-        },
-        err => {
-          console.log("Error occured : " + err);
-        }
-      );
-  }
+  
 }
