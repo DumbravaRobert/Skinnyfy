@@ -15,12 +15,14 @@ import { BarcodeScanner } from '@ionic-native/barcode-scanner/ngx';
 import { FoodArrayService } from './services/foodArray.service';
 import { CaloriesCountService } from './services/caloriesCount.service';
 import { AngularFireDatabase } from '@angular/fire/database';
+import { AngularFireModule } from '@angular/fire';
+import { environment } from 'src/environments/environment';
 
 
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,AngularFireAuthModule,FormsModule],
+  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,AngularFireAuthModule,FormsModule, AngularFireModule.initializeApp(environment.firebase)],
   providers: [
     StatusBar,
     SplashScreen,
