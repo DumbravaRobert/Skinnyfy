@@ -1,9 +1,41 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      Tab Three
+     Profile
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content></ion-content>
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col text-center>
+        Welcome to Your Profile!
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col text-center>
+        Your Registered EmailID : {{userEmail}}
+      </ion-col>
+    </ion-row>
+  </ion-grid>  
+  <div>
+    <ion-button href="/camera">
+      <img src="assets/cameraGri.svg" height="42" width="42">
+      <style>
+          .button {
+            border: none;
+            position: absolute;
+            top: 480px;
+            right: 15px;
+          }
+          </style>
+    </ion-button>
+    </div>
+</ion-content>
+
+<ion-footer (click)="logout()">
+  <ion-toolbar color="secondary">
+    <ion-title>Log out</ion-title>
+  </ion-toolbar>
+</ion-footer>
