@@ -26,6 +26,7 @@ import { FoodArrayService } from './services/foodArray.service';
     SplashScreen,
     FoodArrayService,
     AuthenticateService,
+    FoodArrayService,
     ReactiveFormsModule,
   
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
