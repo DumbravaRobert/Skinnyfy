@@ -3,6 +3,8 @@ import {
   BarcodeScannerOptions,
   BarcodeScanner
 } from "@ionic-native/barcode-scanner/ngx";
+import { FoodArrayService } from '../services/foodArray.service';
+import { BarCode } from '../models/barCode.model';
  
 @Component({
   selector: "app-camera",
@@ -14,7 +16,7 @@ export class CameraPage {
   scannedData: {};
   barcodeScannerOptions: BarcodeScannerOptions;
  
-  constructor(private barcodeScanner: BarcodeScanner) {
+  constructor(private barcodeScanner: BarcodeScanner, private barCodesArray: FoodArrayService) {
     this.encodeData = "";
     //Options
     this.barcodeScannerOptions = {
@@ -27,8 +29,9 @@ export class CameraPage {
     this.barcodeScanner
       .scan()
       .then(barcodeData => {
-        alert("Barcode data " + JSON.stringify(barcodeData));
         this.scannedData = barcodeData;
+        var barCode: BarCode = this.barCodesArray.findByBarCode(+barcodeData.text);
+        alert("Barcode data " + JSON.stringify(barCode));
       })
       .catch(err => {
         console.log("Error", err);
