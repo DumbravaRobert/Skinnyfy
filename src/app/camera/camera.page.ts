@@ -34,7 +34,7 @@ export class CameraPage {
       .then(barcodeData => {
         this.scannedData = barcodeData;
         var barCode: BarCode = this.barCodesArray.findByBarCode(+barcodeData.text);
-        this.caloriesCountService.addCalorie(barCode.calories);
+        this.caloriesCountService.addCalorie(barCode);
         alert("Barcode data " + JSON.stringify(barCode));
       })
       .catch(err => {

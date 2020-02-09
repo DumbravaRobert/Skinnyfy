@@ -22,7 +22,14 @@ import { environment } from 'src/environments/environment';
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,AngularFireAuthModule,FormsModule, AngularFireModule.initializeApp(environment.firebase)],
+  imports: [
+    BrowserModule, 
+    IonicModule.forRoot(), 
+    AppRoutingModule,
+    AngularFireAuthModule,
+    FormsModule, 
+    AngularFireModule.initializeApp(environment.firebase
+    )],
   providers: [
     StatusBar,
     SplashScreen,
