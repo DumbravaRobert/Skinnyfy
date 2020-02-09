@@ -24,6 +24,7 @@ import { FoodArrayService } from './services/foodArray.service';
   providers: [
     StatusBar,
     SplashScreen,
+    FoodArrayService,
     AuthenticateService,
     FoodArrayService,
     ReactiveFormsModule,
