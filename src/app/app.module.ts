@@ -14,6 +14,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { BarcodeScanner } from '@ionic-native/barcode-scanner/ngx';
 import { FoodArrayService } from './services/foodArray.service';
 import { CaloriesCountService } from './services/caloriesCount.service';
+import { AngularFireDatabase } from '@angular/fire/database';
 
 
 @NgModule({
@@ -28,6 +29,7 @@ import { CaloriesCountService } from './services/caloriesCount.service';
     FoodArrayService,
     ReactiveFormsModule,
     CaloriesCountService,
+    AngularFireDatabase,
   
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     BarcodeScanner
