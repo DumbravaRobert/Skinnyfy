@@ -8,7 +8,9 @@ const routes: Routes = [
   {  path: '', loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule) }, 
   { path: 'feed', loadChildren: './tab1/tab1.module#Tab1PageModule'},
   { path: 'page', loadChildren: './tab1/tab1.module#Tab1PageModule' },
-  { path: 'camera-tab', loadChildren: './camera-tab/camera-tab.module#CameraTabPageModule' }
+ 
+  { path: 'camera', loadChildren: './camera/camera.module#CameraPageModule' }
+
 
 
 ];

@@ -10,6 +10,7 @@ import { AuthenticateService } from './services/authentication.service';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { FormsModule } from '@angular/forms';
 import * as firebase from 'firebase';
 import { ReactiveFormsModule } from '@angular/forms';
 import { BarcodeScanner } from '@ionic-native/barcode-scanner/ngx';
@@ -18,7 +19,7 @@ import { BarcodeScanner } from '@ionic-native/barcode-scanner/ngx';
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,AngularFireAuthModule],
+  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,AngularFireAuthModule,FormsModule],
   providers: [
     StatusBar,
     SplashScreen,

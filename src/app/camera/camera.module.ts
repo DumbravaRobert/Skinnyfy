@@ -5,18 +5,14 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { IonicModule } from '@ionic/angular';
 
-import { CameraTabPage } from './camera-tab.page';
-
-import { BarcodeScanner } from '@ionic-native/barcode-scanner/ngx';
-
+import { CameraPage } from './camera.page';
 
 const routes: Routes = [
   {
     path: '',
-    component: CameraTabPage
+    component: CameraPage
   }
 ];
-
 
 @NgModule({
   imports: [
@@ -25,6 +21,6 @@ const routes: Routes = [
     IonicModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [CameraTabPage]
+  declarations: [CameraPage]
 })
-export class CameraTabPageModule {}
+export class CameraPageModule {}

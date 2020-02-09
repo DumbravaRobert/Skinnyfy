@@ -1,22 +1,22 @@
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CameraTabPage } from './camera-tab.page';
+import { CameraPage } from './camera.page';
 
-describe('CameraTabPage', () => {
-  let component: CameraTabPage;
-  let fixture: ComponentFixture<CameraTabPage>;
+describe('CameraPage', () => {
+  let component: CameraPage;
+  let fixture: ComponentFixture<CameraPage>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CameraTabPage ],
+      declarations: [ CameraPage ],
       schemas: [CUSTOM_ELEMENTS_SCHEMA],
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(CameraTabPage);
+    fixture = TestBed.createComponent(CameraPage);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
