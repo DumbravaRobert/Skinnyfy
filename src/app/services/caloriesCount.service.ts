@@ -15,6 +15,6 @@ export class CaloriesCountService {
     }
 
     addCalorie(calorie: BarCode): void {
-        this.caloriesRef.push({ ...calorie, ...{ date: new Date() }});
+        this.caloriesRef.push({ ...calorie, date: new Date() });
     }
 }
