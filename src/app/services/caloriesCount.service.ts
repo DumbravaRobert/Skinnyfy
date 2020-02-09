@@ -15,8 +15,6 @@ export class CaloriesCountService {
     }
 
     addCalorie(calorie: BarCode): void {
-        var dateFormat = require('dateformat');
-        var now = new Date();
-        this.caloriesRef.push({ ...calorie, ...{ date: dateFormat(now, "dd, mm, yy")} });
+        this.caloriesRef.push({ ...calorie, ...{ date: new Date() }});
     }
 }
