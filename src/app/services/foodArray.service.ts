@@ -71,7 +71,13 @@ export class FoodArrayService {
         "name": "chocolate",
         "calories": 600,
         "group": "sweets"
-    }
+    },
+    {
+        "barCode": null,
+        "name": "null",
+        "calories": 0,
+        "group": "null"
+    },
     ]
 
     getAllBarcodes() {

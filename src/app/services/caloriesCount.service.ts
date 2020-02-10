@@ -15,7 +15,8 @@ export class CaloriesCountService {
     }
 
     addBarCodeObj(barCode: BarCode): void {
-        this.caloriesRef.push({ ...barCode, date: new Date() });
+        
+        this.caloriesRef.push({ ...barCode, date: new Date().toISOString() });
     }
 
     getAllBarcodes() {
