@@ -74,9 +74,9 @@ export class FoodArrayService {
     },
     {
         "barCode": null,
-        "name": "null",
-        "calories": 0,
-        "group": "null"
+        "name": "banana",
+        "calories": 100,
+        "group": "fruits"
     },
     ]
 
