@@ -6,7 +6,7 @@ import { BarCode } from '../models/barCode.model';
 export class CaloriesCountService {
 
 
-    private dbPath = '/calories';
+    private dbPath = '/scanedBarCodes';
 
     caloriesRef: AngularFireList<any> = null;
 
@@ -14,7 +14,12 @@ export class CaloriesCountService {
         this.caloriesRef = db.list(this.dbPath);
     }
 
-    addCalorie(calorie: BarCode): void {
-        this.caloriesRef.push({ ...calorie, date: new Date() });
+    addBarCodeObj(barCode: BarCode): void {
+        this.caloriesRef.push({ ...barCode, date: new Date() });
     }
+
+    getAllBarcodes() {
+        return this.caloriesRef;
+    }
+
 }

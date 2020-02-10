@@ -34,7 +34,9 @@
     "core-js": "^2.5.4",
     "dateformat": "^3.0.3",
     "firebase": "^7.8.1",
+    "gradle": "^1.0.9",
     "phonegap-plugin-barcodescanner": "^8.1.0",
+    "rimraf": "^3.0.2",
     "rxjs": "~6.5.1",
     "tslib": "^1.9.0",
     "zone.js": "~0.9.1"
@@ -74,7 +76,9 @@
   "description": "An Ionic project",
   "cordova": {
     "plugins": {
-      "phonegap-plugin-barcodescanner": {},
+      "phonegap-plugin-barcodescanner": {
+        "ANDROID_SUPPORT_V4_VERSION": "27.+"
+      },
       "cordova-plugin-whitelist": {},
       "cordova-plugin-statusbar": {},
       "cordova-plugin-device": {},
