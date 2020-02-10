@@ -7,42 +7,44 @@
 </ion-header>
 
 <ion-content>
-    <div class="ion-padding">
-        <p>calories for today:</p>
-        <ion-progress-bar>
-       
-        </ion-progress-bar>
-        <br>
-        <ion-item-divider>
-         </ion-item-divider>
-         <p>Today:</p>
-         <!--<p><img src="assets/tomato.svg"></p>-->
-         <br>
-         <ion-item-divider>
-           </ion-item-divider>
-         
-      <ion-list></ion-list>
+  <div class="ion-padding">
+    <p>calories for today:</p>
+    <ion-progress-bar>
 
-      <ion-infinite-scroll threshold="100px" (ionInfinite)="loadData($event)">
-        <ion-infinite-scroll-content
-          loadingSpinner="dots"
-          loadingText="Se incarca...">
-        </ion-infinite-scroll-content>
-      </ion-infinite-scroll>
-      <div>
+    </ion-progress-bar>
+    <br>
+    <ion-item-divider>
+    </ion-item-divider>
+    <p>Today:</p>
+    <!--<p><img src="assets/tomato.svg"></p>-->
+    <br>
+    <ion-item-divider>
+    </ion-item-divider>
+
+    <ion-list>
+      <ion-item *ngFor="let item of scrollList">
+        <ion-label>{{item.name}}</ion-label>
+        <ion-label>{{item.calories}}</ion-label>
+      </ion-item>
+    </ion-list>
+
+    <ion-infinite-scroll threshold="100px" (ionInfinite)="loadData($event)">
+      <ion-infinite-scroll-content loadingSpinner="dots" loadingText="Se incarca...">
+      </ion-infinite-scroll-content>
+    </ion-infinite-scroll>
+    <div>
       <ion-button href="/camera">
         <img src="assets/cameraGri.svg" height="42" width="42">
         <style>
-            .button {
-              border: none;
-              position: absolute;
-              top: 480px;
-              right: 15px;
-            }
-            </style>
+          .button {
+            border: none;
+            position: absolute;
+            top: 480px;
+            right: 15px;
+          }
+        </style>
       </ion-button>
-      </div>
-      </div>
+    </div>
+  </div>
 
 </ion-content>
- 
